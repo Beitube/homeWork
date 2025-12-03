@@ -8,16 +8,14 @@ h_start = 10 # вертикальная составляющая положен�
 h_end = 3.0E+1 # вертикальная составляющая положения тела в конечный момент движени
 T = 3.0 # время полета
 s_end = 5.0e1 # горизонтальное перемещение тела за время полета
-h_start # переменная не отобразится
-h_end # переменная отобразится
+h_start 
+h_end 
 print(h_start, h_end)
 g = const.g
 g, const.unit('standard acceleration of gravity')
 step = 0.01
 t_list = [0 + i*step for i in range(int(T/0.01))]
 t_array = np.arange(0,T,step)
-#?range
-#?np.arange
 v0_x = s_end/T
 v0_x
 v0_y = (h_end-h_start+g/2*T**2)/T
@@ -26,7 +24,7 @@ alpha = math.atan(v0_y/v0_x)
 alpha, math.degrees(alpha)
 f's_x(t) = {v0_x} t'
 f's_y(t) = {h_start} + {v0_y} t - {g}/2*t\N{superscript two}'
-t_list, t_array; # символ ; в конце выражения предотвращает вывод результата выполн
+t_list, t_array; 
 s_x_list = [v0_x*t for t in t_list]
 s_y_list = [h_start+v0_y*t-g*t**2/2 for t in t_list]
 s_x_array = v0_x*t_array
@@ -34,7 +32,7 @@ s_y_array = h_start+v0_y*t_array-g*t_array**2/2
 plt.figure()
 plt.plot(s_x_list,s_y_list,'b-',lw=5)
 plt.title('Вертикальное перемещение тела')
-plt.xlabel('x (m)'); plt.ylabel('y (m)') # символ ; позволяет записывать несколько
+plt.xlabel('x (m)'); plt.ylabel('y (m)') 
 plt.axis([0, s_end, 0, h_end+15]);
 plt.figure()
 plt.plot(s_x_array,s_y_array,color='green',lw=3)
