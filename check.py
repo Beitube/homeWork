@@ -1,0 +1,15 @@
+name = input("Название товара: ")
+price = int(input("Цена за единицу: "))
+quant = int(input("Количество: "))
+genPrice = price * quant
+
+print("=" * 40)
+print(" " * 9 + "КАССОВЫЙ ЧЕК")
+print("=" * 40)
+print(f"Товар: [{name}]")
+print(f"Цена: [{price}] руб.")
+print(f"Кол-во: [{quant}] шт.")
+print("\033[32m" + "-" * 40 + "\033[0m")
+print("\033[32m" + "ИТОГО:" + "[" + str(genPrice) + "]" + "руб." + "\033[0m")
+print("\033[32m" + "=" * 40 + "\033[0m")
+print("\033[32m" + " " * 4 + "Спасибо за покупку!" + "\033[0m")
