@@ -1,0 +1,7 @@
+CREATE TABLE courier_info (
+courier_id SERIAL PRIMARY KEY,
+first_name CHARACTER VARYING (15) NOT NULL,
+last_name CHARACTER VARYING (20) NOT NULL,
+phone_number CHARACTER VARYING (15) NOT NULL UNIQUE,
+delivery_type CHARACTER VARYING (10) DEFAULT 'car'
+);
